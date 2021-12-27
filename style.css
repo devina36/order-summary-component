@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --paleblue: hsl(225, 100%, 94%);
+  --brightblue: hsl(245, 75%, 52%);
+  --verypaleblue: hsl(225, 100%, 98%);
+  --desaturated: hsl(224, 23%, 55%);
+  --darkblue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--paleblue);
+  background-image: url('./images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+main {
+  width: 330px;
+  height: 550px;
+  background: var(--verypaleblue);
+  border-radius: 20px;
+}
+
+main img {
+  width: inherit;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-body {
+  margin: 0 10%;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--darkblue);
+}
+
+p {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--desaturated);
+}
+
+.bg-pale {
+  background: rgba(224, 232, 255, 0.3);
+  border-radius: 10px;
+}
+
+.row {
+  padding: 3%;
+  grid-template-columns: auto auto;
+  display: flex;
+  /* margin-top: 1.5rem; */
+}
+
+.price {
+  display: flex;
+  line-height: 5px;
+  justify-content: center;
+}
+
+.price img {
+  width: 48px;
+  height: 48px;
+}
+
+h2 {
+  font-weight: 700 !important;
+  font-size: 16px;
+  color: var(--darkblue);
+}
+
+.play {
+  padding-left: 15px;
+}
+
+.play h2,
+.play p {
+  font-size: 16px;
+}
+
+.change {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.change a:hover {
+  text-decoration: none;
+  opacity: 0.65;
+}
+
+.change a {
+  color: var(--brightblue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+button {
+  all: unset;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background: var(--brightblue);
+  width: 100%;
+  border-radius: 10px;
+  padding: 5% 0;
+  color: var(--verypaleblue);
+  box-shadow: 0 10px 20px#7280a799;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.cancel {
+  color: var(--desaturated);
+  margin-top: 10%;
+}
+
+.cancel:hover {
+  cursor: pointer;
+  color: var(--darkblue);
+}
+
+@media screen and (max-width: 1440px) {
+  main {
+    height: 700px;
+    width: 450px;
+  }
+
+  h1 {
+    margin-top: 10%;
+  }
+
+  .text-p {
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  main {
+    height: 550px;
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url('./images/pattern-background-mobile.svg');
+  }
+}
